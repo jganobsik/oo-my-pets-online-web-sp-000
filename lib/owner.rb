@@ -24,4 +24,9 @@ class Owner
   def self.count
     @@all_owners.length
   end
+  
+  def self.buy_fish(name)
+    new_fish = fish.new
+    
+  end
 end
