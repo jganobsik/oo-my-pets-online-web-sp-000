@@ -59,7 +59,34 @@ class Owner
   end
   
   def list_pets
-   return "I have #{:fishes.count} fish, #{:dogs.count} dog(s), and #{:cats.count} cat(s)."
+    fish_count = 0
+    dog_count = 0 
+    cat_count = 0 
+    
+   pets[:fishes].each do |fish|
+      fish_count += 1 
+    end
+   pets[:dogs].each do |dog|
+      dog_count += 1 
+    end
+   pets[:cats].each do |cat|
+      cat_count += 1 
+    end   
+      
+    
+   return "I have #{fish_count} fish, #{dog_count} dog(s), and #{cat_count} cat(s)."
   end
   
+  
+  def sell_pets 
+     pets[:dogs].each do |dog|
+      dog.mood = 'nervous'
+    end
+     pets[:cats].each do |cat|
+      cat.mood = 'nervous'
+    end
+      pets[:fishes].each do |fish|
+      fish.mood = 'nervous'
+    end
+  end
 end
