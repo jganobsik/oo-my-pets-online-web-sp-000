@@ -39,4 +39,8 @@ class Owner
     new_cat = Cat.new(name)
     pets[:cats] << new_cat
   end
+  
+  def walk_dogs
+    pets[:dogs].each do |dog|
+      dog.
 end
