@@ -25,7 +25,7 @@ class Owner
     @@all_owners.length
   end
   
-  def Owner.buy_fish(name)
+  def buy_fish(name)
     new_fish = fish.new(name)
     fishes << new_fish
   end
